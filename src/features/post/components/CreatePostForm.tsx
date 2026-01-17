@@ -35,6 +35,7 @@ const CreatePostForm = () => {
   })
   async function onSubmit(values: z.infer<typeof PostCreate>) {
    const {title,body}=values;
+   console.log(values)
    await execute({title,body})
   }
 useEffect(()=>{

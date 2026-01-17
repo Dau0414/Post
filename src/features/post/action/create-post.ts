@@ -10,7 +10,7 @@ import { PostCreate } from "../schemas"
 
 
 export const createPost=actionClient.inputSchema(PostCreate).action(async({parsedInput:{title,body}})=>{
-   
+    console.log("SERVER ACTION RECEIVED:", { title, body });
     try{
         
     
@@ -27,6 +27,7 @@ export const createPost=actionClient.inputSchema(PostCreate).action(async({parse
         }
        }
     catch(error){
+        console.log("Error creating post:", error);
          throw new Error("Create Post:Failed to create post")
        }
 })
