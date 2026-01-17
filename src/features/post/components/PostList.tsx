@@ -1,6 +1,5 @@
 import { getPosts } from "@/features/post/queries/get-posts";
 import PostItem from "@/features/post/components/PostItem";
-import { Post } from "../../../../generated/prisma/client";
 
 async function PostList  () {
     const item=await getPosts();

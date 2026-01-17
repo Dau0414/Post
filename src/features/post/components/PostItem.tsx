@@ -5,7 +5,7 @@ import { POST_EDIT, SINGLE_POST } from '@/path'
 import { ArrowUpRightIcon, Edit, Edit2Icon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import { Post } from '../../../../generated/prisma/client'
+import { Post } from '@prisma/client'
 import { Badge } from '@/components/ui/badge'
 import DeleteButton from './DeleteButton'
 interface Props extends Post{
