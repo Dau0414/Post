@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { Post } from "../../../../generated/prisma/client";
+import { Post } from "@prisma/client";
 
 export const getPosts = async (): Promise<Post[]> => {
     return prisma.post.findMany({
